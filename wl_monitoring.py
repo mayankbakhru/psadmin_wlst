@@ -1,0 +1,23 @@
+import datetime
+
+redirect('/app/psoft/pt856/monitor/logs/current.log')
+connect ('system','Passw0rd','t3://nyphrwb11:9999')
+domainRuntime()
+
+cd('/ServerRuntimes/PIA1')
+print ("{")
+print("Date:" + str(datetime.datetime.now()))
+print("Status: "+cmo.getState())
+print("Status: "+cmo.getState())
+cd('JVMRuntime/PIA1')
+print("JVM Heap Free:" + str(cmo.getHeapFreeCurrent()))
+print("JVM Heap Free Percentage:"+str(cmo.getHeapFreePercent()))
+print("JVM Size Current:"+str(cmo.getHeapSizeCurrent()))
+cd ('/')
+cd('/ServerRuntimes/PIA1/ApplicationRuntimes/peoplesoft/ComponentRuntimes/PIA_')
+print("Current Session Count:" + str(cmo.getOpenSessionsCurrentCount()))
+print("cookie name:" + cmo.getSessionCookieName())
+print("Sessions :")
+print(cmo.getServletSessionsMonitoringIds())
+print("}")
+exit()
