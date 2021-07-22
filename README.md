@@ -1,6 +1,6 @@
 # psadmin_wlst
 PSADMIN WLST code
-This is were built in environment having:
+This was built in environment having:
 Oracle Weblogic 12.2.1
 PT 8.56.04
 to invoke these scripts use following commands:
